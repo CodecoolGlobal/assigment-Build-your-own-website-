@@ -43,7 +43,7 @@ html, body {
 }
 
 .main-header {
-    background-color: rgba(0,0,0,.4);
+    background-color: rgba(0, 0, 0, .4);
     background-image: url("navbar.jpg");
     background-blend-mode: multiply;
     background-size: cover;
@@ -77,4 +77,17 @@ html, body {
 .content-section.container p {
     font-weight: bold;
     color: #003aff;
+}
+
+.baby-seal-image {
+    background-blend-mode: multiply;
+    background-size: cover;
+    float: right;
+    height: 200px;
+    width: 190px;
+    margin: 20px;
+    border-radius: 50%;
+    box-shadow: rgb(0, 27, 121) 3px 3px 3px;
+    background-image: url("seal.jpg");
+    background-color: rgb(173, 199, 255);
 }
