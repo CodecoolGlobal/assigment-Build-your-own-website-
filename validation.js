@@ -4,7 +4,7 @@ let message = document.getElementById('message-content');
 let button = document.getElementById('button-submit');
 let sendForm = document.getElementById('sendForm');
 
-console.log(sendForm);
+console.log(name.innerText);
 
 sendForm.addEventListener('input', () => {
     if (name.value.length > 0 &&
@@ -16,3 +16,16 @@ sendForm.addEventListener('input', () => {
     }
 });
 
+checkForWhiteSpaces = function (name) {
+    if(!name.value.replace(/\s/g,'').length){
+        console.log("Name only consists of whitespaces!")
+    }else {
+        console.log("No white spaces!")
+    }
+}
+
+
+
+button.addEventListener('click',()=> {
+    checkForWhiteSpaces(name);
+});
