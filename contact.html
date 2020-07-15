@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Homepage</title>
     <link rel="stylesheet" href="style.css"/>
+    <script src="validation.js" defer></script>
 </head>
 <body>
 <header class="main-header">
@@ -18,17 +19,19 @@
 </header>
 
 <section class="content-section container">
-    <form action="">
+    <form id="sendForm">
         <h2 class="section-header">Please, fill in the forms</h2>
         <label for="name-content"></label>
-            <input id="name-content" type="text" placeholder="Enter your name" required>
+        <input id="name-content" class="inputs" type="text" placeholder="Enter your name" required>
         <label for="email-content"></label>
-            <input id="email-content" type="email" placeholder="Give your email" required>
+        <input id="email-content" class="inputs" type="email" placeholder="Give your email" required>
         <label for="message-content"></label>
-        <textarea name="message-content" id="message-content" cols="30" rows="10" placeholder="Write a message to us" required></textarea>
-        <button>SUBMIT</button>
+        <textarea name="message-content" id="message-content" class="inputs" cols="30" rows="10" placeholder="Write a message to us"
+                  required></textarea>
+        <button type="button" id="button-submit" disabled="true">SUBMIT</button>
     </form>
 </section>
 
 </body>
+
 </html>
