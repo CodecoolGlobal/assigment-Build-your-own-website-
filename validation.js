@@ -3,9 +3,7 @@ let email = document.getElementById('email-content');
 let message = document.getElementById('message-content');
 let button = document.getElementById('button-submit');
 let sendForm = document.getElementById('sendForm');
-const letters = /^[A-Za-z]+$/;
 
-console.log(name.innerText);
 
 sendForm.addEventListener('input', () => {
     if (name.value.length > 0 &&
@@ -18,22 +16,23 @@ sendForm.addEventListener('input', () => {
 });
 
 checkForWhiteSpaces = function (name) {
-    if (!name.value.replace(/\s/g, '').length) {
-        console.log("Name only consists of whitespaces!")
+    if (name.value && !name.value.trim()) {
+        console.log("Name only consists of whitespaces or is empty!")
     } else {
-        console.log("No white spaces!")
+        console.log("No only white spaces!")
     }
 }
 
 checkIfOnlyLettersAndSpace = function (name) {
-    if (name.value.match(letters)) {
-        console.log("Name does only contain of letters!")
+    const letters = name.value;
+    if (letters.match("[a-zA-Z\\s\'\"]+")) {
+        console.log("Letters and whitespace!")
     } else {
-        console.log("Alert. Name has unwanted digits!")
+        console.log("Boooo!")
     }
 }
 
 button.addEventListener('click', () => {
-    checkForWhiteSpaces(name);
+    // checkForWhiteSpaces(name);
     checkIfOnlyLettersAndSpace(name);
 });
