@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Homepage</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 <header class="main-header">
@@ -18,10 +18,16 @@
 </header>
 
 <section class="content-section container">
-    <h2 class="section-header">Please, fill in the forms</h2>
-    <input type="text" placeholder="write your email address here">
-    <br>
-    <textarea name="" id="" cols="30" rows="10" placeholder="write your data here"></textarea>
+    <form action="">
+        <h2 class="section-header">Please, fill in the forms</h2>
+        <label for="name-content"></label>
+            <input id="name-content" type="text" placeholder="Enter your name">
+        <label for="email-content"></label>
+            <input id="email-content" type="email" placeholder="Give your email">
+        <label for="message-content"></label>
+        <textarea name="message-content" id="message-content" cols="30" rows="10" placeholder="Write a message to us"></textarea>
+        <button>SUBMIT</button>
+    </form>
 </section>
 
 </body>
