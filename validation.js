@@ -90,19 +90,11 @@ validateEmail = function (email) {
 
 button.addEventListener('click', () => {
 
-    checkForWhiteSpacesName(name);
-    if (checkIfOnlyLettersAndSpace(name) && checkLengthOfName(name)) {
-        checkIfWordStartWithCapital(name);
+        if (checkForWhiteSpacesName(name) && checkIfOnlyLettersAndSpace(name) && checkLengthOfName(name) &&
+            checkIfWordStartWithCapital(name) && checkForWhiteSpacesEmail(email) && validateEmail(email)){
+            alert("CONGRATULATIONS");
+        }
+
     }
-
-    if (checkForWhiteSpacesEmail(email)) {
-        validateEmail(email);
-    }
-
-    if (checkIfWordStartWithCapital(name) && validateEmail(email)) {
-        alert("CONGRATULATIONS");
-    }
-
-
-});
+);
 
